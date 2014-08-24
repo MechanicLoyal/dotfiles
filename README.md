@@ -1,6 +1,6 @@
 dotfiles
 ========
 
-- vim profile
+- vim profile  
 
   _vimrc
