@@ -1,32 +1,29 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use vundle [https://github.com/gmarik/Vundle.vim] to manage plugins "
+" 使用Vundle[https://github.com/gmarik/Vundle.vim]来管理各种Vim插件   "
+" BEGIN vundle                                                        "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible		" be iMproved, required
-filetype off			" required
-
-" set the runtime path to include Vundle and initialize
+set nocompatible
+filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
-" alternatively, pass a path where Vundle should install plugins
 call vundle#begin('~/.vim/bundle/plugins')
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
 
-" Plugins
+Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'The-NERD-tree'
 Plugin 'https://github.com/vim-ruby/vim-ruby'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/neomru.vim'
 
-" All of your Plugins must be added before the following line
-call vundle#end()		" required
-filetype plugin indent on	" required
+call vundle#end()
+filetype plugin indent on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " END vundle                                                          "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" 1.Plugin setting.
+"""""""""""""""""""""""""""VIM Profile"""""""""""""""""""""""""""""""""
+
+" 1.插件设置
 
 " vim-colors-solarized
 syntax enable
@@ -49,13 +46,13 @@ au FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action('vspli
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 
-" 2.User setting.
+" 2.用户设置
+
 " 自动显示行号
 set number
 " 修改行号颜色
 highlight LineNr ctermfg=darkyellow
-
-" 自动添加括号等
+" 括号自动补足
 imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
