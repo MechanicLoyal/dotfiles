@@ -27,6 +27,13 @@ filetype plugin indent on
 syntax enable
 set background=dark
 colorscheme solarized
+if !has('gui_running')
+    let g:solarized_termtrans=1
+    if (&t_Co >= 256 || $TERM == 'xterm-256color')
+    else
+        let g:solarized_termcolors=16
+    endif
+endif
 
 " The-NERD-tree
 autocmd vimenter * NERDTree
