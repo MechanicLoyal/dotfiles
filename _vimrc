@@ -12,6 +12,7 @@ Plugin 'The-NERD-tree'
 Plugin 'https://github.com/vim-ruby/vim-ruby'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/neomru.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 call vundle#end()
 filetype plugin indent on
@@ -29,6 +30,8 @@ colorscheme solarized
 
 " The-NERD-tree
 autocmd vimenter * NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+map <C-o> :NERDTreeToggle<CR>
 
 " Shougo/unite.vim and Shougo/neomru.vim
 let g:unite_enable_start_insert=1
@@ -43,6 +46,9 @@ au FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action('vspli
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 
+" vim-indent-guides
+let g:indent_guides_enable_on_vim_startup = 1
+
 " 2.用户设置
 
 " 自动显示行号
@@ -53,3 +59,5 @@ highlight LineNr ctermfg=darkyellow
 imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
+" 
+filetype on
