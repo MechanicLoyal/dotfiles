@@ -1,6 +1,6 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 使用Vundle[https://github.com/gmarik/Vundle.vim]来管理各种Vim插件   "
-"""""""""""""""""""""""""""Begin Vundle""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use Vundle [https://github.com/gmarik/Vundle.vim] to manage Vim plugins "
+"""""""""""""""""""""""""""Begin Vundle"""""""""""""""""""""""""""""""""""
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -17,11 +17,11 @@ Plugin 'nathanaelkane/vim-indent-guides'
 call vundle#end()
 filetype plugin indent on
 
-"""""""""""""""""""""""""""End Vundle""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""End Vundle""""""""""""""""""""""""""""""""""""
 
-"""""""""""""""""""""""""""VIM Profile"""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""VIM Profile"""""""""""""""""""""""""""""""""""
 
-" 1.插件设置
+" 1.Plugins profile
 
 " vim-colors-solarized
 syntax enable
@@ -36,7 +36,7 @@ if !has('gui_running')
 endif
 
 " The-NERD-tree
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <C-o> :NERDTreeToggle<CR>
 
@@ -55,19 +55,23 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 
 " vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
+set ts=2 sw=2 et
+let g:indent_guides_start_level = 2
 
-" 2.用户设置
+" 2.User profile
 
-" 自动显示行号
 set number
-" 修改行号颜色
 highlight LineNr ctermfg=darkyellow
-" 括号自动补足
+
+set autoindent
+set smartindent
+
 imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
 
 filetype on
+
 set backspace=2
 
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936,iso-2022-jp,euc-jp,sjis
