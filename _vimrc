@@ -66,16 +66,14 @@ highlight LineNr ctermfg=darkyellow
 imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
-" 
-filetype on
 
-"解决中文乱码
-set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+filetype on
+set backspace=2
+
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936,iso-2022-jp,euc-jp,sjis
 set termencoding=utf-8
 set encoding=utf-8
-"解决consle输出乱码
-language message zh_CN.utf-8 
-" 菜单中文
+language message en_US.utf-8
+set langmenu=en_US.utf-8
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
-
