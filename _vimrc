@@ -13,6 +13,8 @@ Plugin 'https://github.com/vim-ruby/vim-ruby'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/neomru.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 call vundle#end()
 filetype plugin indent on
@@ -57,6 +59,10 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 let g:indent_guides_enable_on_vim_startup = 1
 set ts=2 sw=2 et
 let g:indent_guides_start_level = 2
+
+" plasticboy/vim-markdown
+let g:vim_markdown_folding_disabled=1
+au BufRead,BufNewFile *.md set filetype=markdown
 
 " 2.User profile
 
