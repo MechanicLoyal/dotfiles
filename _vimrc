@@ -66,10 +66,10 @@ endif
 "使用Vundle来管理插件
 set nocompatible			"禁用 Vi 兼容模式
 filetype off				"禁用文件类型侦测
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'altercation/vim-colors-solarized'
