@@ -2,5 +2,8 @@
 ========
 
 - vim profile  
-
-  _vimrc
+.vimrc 
+- bash profile  
+.bashrc
+- tmux profile  
+.tmux
