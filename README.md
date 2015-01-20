@@ -6,4 +6,4 @@
 - bash profile  
 .bashrc
 - tmux profile  
-.tmux
+.tmux.conf
