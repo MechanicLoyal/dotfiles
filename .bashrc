@@ -12,4 +12,9 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # Add tools executable files path
-PATH=/opt/bin:$PATH
+export PATH=/opt/bin:$PATH
+
+# Add pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
